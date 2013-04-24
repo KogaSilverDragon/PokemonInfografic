@@ -1,0 +1,59 @@
+<div id="infoPanel">
+    <img src="img/MapBlur.jpg" alt="Unova Map"/>
+    <div class="pkmnOnRoute" ng-class="{N: grassActive, S: !grassActive}">
+        <div class="btnContainer">
+            <div class="N" ng-click="openGrass()"><div class="btnWrapper"><div class="ball"></div></div></div>
+            <div class="S" ng-click="openSurf()"><div class="btnWrapper"><div class="ball"></div></div></div>
+            <div class="close" ng-click="close()"><div class="btnWrapper"><div class="ball">X</div></div></div>
+        </div>
+        <div class="filterContainer">
+            <label class="radio b" ng-class="{active: gameFilter == 'B'}">
+                <span>Black</span><input type="radio" ng-model="gameFilter" value="B"/>
+            </label>
+            <label class="radio w" ng-class="{active: gameFilter == 'W'}">
+                <span>White</span><input type="radio" ng-model="gameFilter" value="W"/>
+            </label>
+            <label class="checkbox winter" ng-class="{active: winterFilter == 'onWinter|none'}">
+                <input type="checkbox" ng-model="winterFilter" ng-true-value="onWinter|none" ng-false-value="outWinter|none"/>
+            </label>
+        </div>
+        <div class="pkmnContainer" ng-init="pokemons = route.pokemons">
+            <ul class="grassMeter normal">
+                <li ng-repeat="pokemon in Nlist = (pokemons | filter: {spot: 'N', game: gameFilter} | regex: 'specialCondition': winterFilter)" style="width: {{pkmnRate(pokemon)}};"
+                    class="{{pokemon.type}}">
+                    <div class="pokemonIcon pkmn{{pokemon.number}} {{pokemon.game}} {{pokemon.specialCondition}}">
+                        <span class="name">#{{pokemon.number}} {{pokemon.name}}</span>
+                        <span class="rate">{{pkmnRate(pokemon)}}</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="grassMeter rustling">
+                <li ng-repeat="pokemon in RGlist = (pokemons | filter: {spot:'RG', game: gameFilter} | regex: 'specialCondition': winterFilter)" style="width: {{pkmnRate(pokemon)}};"
+                    class="{{pokemon.type}}">
+                    <div class="pokemonIcon pkmn{{pokemon.number}} {{pokemon.game}} {{pokemon.specialCondition}}">
+                        <span class="name">#{{pokemon.number}} {{pokemon.name}}</span>
+                        <span class="rate">{{pkmnRate(pokemon)}}</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="surfMeter surf">
+                <li ng-repeat="pokemon in Slist = (pokemons | filter: {spot: 'S', game: gameFilter} | regex: 'specialCondition': winterFilter)" style="width: {{pkmnRate(pokemon)}};"
+                    class="{{pokemon.type}}">
+                    <div class="pokemonIcon pkmn{{pokemon.number}} {{pokemon.game}} {{pokemon.specialCondition}}">
+                        <span class="name">#{{pokemon.number}} {{pokemon.name}}</span>
+                        <span class="rate">{{pkmnRate(pokemon)}}</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="surfMeter ravaging">
+                <li ng-repeat="pokemon in RWlist = (pokemons | filter: {spot: 'RW', game: gameFilter} | regex: 'specialCondition': winterFilter)" style="width: {{pkmnRate(pokemon)}};"
+                    class="{{pokemon.type}}">
+                    <div class="pokemonIcon pkmn{{pokemon.number}} {{pokemon.game}} {{pokemon.specialCondition}}">
+                        <span class="name">#{{pokemon.number}} {{pokemon.name}}</span>
+                        <span class="rate">{{pkmnRate(pokemon)}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

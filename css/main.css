@@ -1,0 +1,1073 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family:"Pokemon Pixel Font Regular";
+    src: url("../font/pokemon_pixel_font.eot?") format("eot"),
+         url("../font/pokemon_pixel_font.woff") format("woff"),
+         url("../font/pokemon_pixel_font.ttf") format("truetype"),
+         url("../font/pokemon_pixel_font.svg#Pokemon-Pixel-Font") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url("../img/bg_checkered_pattern.png");
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Pokemon Pixel Font Regular";
+    position: absolute;
+    top: 10px;
+    left: 55%;
+    font-size: 4em;
+    display: inline-block;
+    color: #FECD15;
+    text-shadow: -3px 0 #3B5BBE, 0 3px #3B5BBE, 3px 0 #3B5BBE, 0 -3px #3B5BBE;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+
+    -moz-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
+
+    z-index: 10;
+}
+
+.route h1 {
+    left: 10%;
+    -moz-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+
+.routes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.routes div {
+    height: 3%;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.routes div:hover { box-shadow: 0 0 30px #FF0000, inset 0 0 50px #FF0000; }
+
+.routes .route1 {
+    top: 78%;
+    left: 85%;
+    transform: rotate(82deg);
+    -moz-transform: rotate(82deg);
+    -webkit-transform: rotate(82deg);
+    width: 8%;
+}
+
+.routes .route2 {
+    top: 65%;
+    left: 85%;
+    transform: rotate(82deg);
+    -moz-transform: rotate(82deg);
+    -webkit-transform: rotate(82deg);
+    width: 7%;
+}
+
+.routes .route3 {
+    top: 62%;
+    left: 76%;
+    transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    width: 12%;
+}
+
+.routes .route4 {
+    top: 68%;
+    left: 69%;
+    transform: rotate(-24deg);
+    -moz-transform: rotate(-24deg);
+    -webkit-transform: rotate(-24deg);
+    width: 6%;
+}
+
+.routes .route5 {
+    top: 66%;
+    left: 41.5%;
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    width: 16%;
+}
+
+.routes .route6 {
+    top: 50%;
+    left: 42%;
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    width: 7%;
+}
+
+.routes .route7 {
+    top: 43%;
+    left: 15%;
+    transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    width: 15%;
+}
+
+.routes .route8 {
+    top: 29%;
+    left: 16%;
+    transform: rotate(-33deg);
+    -moz-transform: rotate(-33deg);
+    -webkit-transform: rotate(-33deg);
+    width: 13%;
+}
+
+.routes .route9 {
+    top: 23%;
+    left: 30%;
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    width: 7%;
+}
+
+.routes .route10 {
+    top: 16%;
+    left: 46%;
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(-45deg);
+    width: 13%;
+    height: 5%;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background: url("../img/MapBlur.jpg") no-repeat center ;
+    background-size: auto 100%;
+}
+
+.route #content:before {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    content: '';
+}
+
+#map, #infoPanel {
+    height: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+#content > div:before {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    margin-right: -60px;
+    background-image: url("../img/BHex.png");
+    width: 500px;
+    height: 100%;
+    content: '';
+    z-index: 1;
+}
+
+#content > div:after {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -60px;
+    background-image: url("../img/WHex.png");
+    width: 500px;
+    height: 100%;
+    content: '';
+    z-index: 1;
+}
+
+#map > img,
+#infoPanel > img { height: 100%; }
+
+.pkmnOnRoute {
+    width: 800px;
+    height: 600px;
+    vertical-align: middle;
+    border: 20px solid #495A66;
+    border-radius: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -300px 0 0 -430px;
+
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.pkmnOnRoute.N { background-color: #D3ECDB; }
+.pkmnOnRoute.S { background-color: #C7D4E6; }
+
+.btnContainer {
+    height: 70px;
+    width: 150px;
+    position: absolute;
+    top: -55px;
+    right: 60px;
+}
+
+.btnContainer > div {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btnContainer > div .btnWrapper {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+.btnContainer > div .ball {
+    width: 70px;
+    height: 70px;
+    content: '';
+    border-radius: 50%;
+    border: 8px solid;
+    box-sizing: border-box;
+}
+
+.pkmnOnRoute.N .btnContainer .S .btnWrapper { height: 35px; }
+.pkmnOnRoute.S .btnContainer .N .btnWrapper { height: 35px; }
+
+.btnContainer > .N .ball {
+    background-color: #35D068;
+    border-color: #396A42;
+}
+
+.btnContainer > .S .ball {
+    background-color: #4684D8;
+    border-color: #353F65;
+}
+
+.btnContainer > .close .ball {
+    background-color: #DDD;
+    border-color: #495A66;
+    color: #495A66;
+    font-size: 3em;
+    font-family: "Pokemon Pixel Font Regular";
+    text-align: center;
+    line-height: 1.2em;
+}
+
+.btnContainer > .close {
+    position: absolute;
+    top: 0;
+    right: -110px;
+}
+
+.filterContainer {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.radio, .checkbox {
+    padding: .2em .6em;
+    border: 3px solid;
+    border-radius: 1em;
+    font-size: 1.5em;
+    line-height: 1em;
+    font-family: "Pokemon Pixel Font Regular";
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.radio > input, .checkbox  > input { display: none; }
+
+.radio.active:after, .checkbox.active:after {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #ec3122;
+    border-radius: 50%;
+    z-index: 1;
+    content: '';
+}
+
+.radio.b {
+    color: #000;
+    background-color: #FFF;
+    border-color: #000;
+}
+
+.radio.w {
+    color: #FFF;
+    background-color: #000;
+    border-color: #FFF;
+}
+
+.checkbox {
+    background: #98D8D8 url("../img/flake.png") no-repeat center;
+    background-size: 80%;
+    padding: 0;
+    border-radius: 50%;
+    border-color: #638D8D;
+    width: 40px;
+    height: 40px;
+}
+
+.grassMeter, .surfMeter {
+    width: 500px;
+    height: 200px;
+    margin: 65px 50px 65px 200px;
+    position: relative;
+    box-sizing: border-box;
+    background: url("../img/regua.png") no-repeat center;
+    padding: 0;
+    list-style: none;
+}
+
+.grassMeter:before, .surfMeter:before {
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: '';
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: -200px;
+}
+
+.grassMeter.normal:before { background-image: url("../img/G.png"); }
+
+.grassMeter.rustling:before {
+    background-image: url("../img/RG.png");
+    animation: shake 1s infinite;
+    -moz-animation: shake 1s infinite;
+    -webkit-animation: shake 1s infinite;
+}
+
+.surfMeter.surf:before { background-image: url("../img/W.png"); }
+
+.surfMeter.ravaging:before {
+    background-image: url("../img/RW.png");
+    animation: shake2 1s infinite;
+    -moz-animation: shake2 1s infinite;
+    -webkit-animation: shake2 1s infinite;
+}
+
+.pkmnOnRoute.N .surfMeter {
+    opacity: 0;
+    display: none;
+}
+
+.pkmnOnRoute.S .grassMeter {
+    opacity: 0;
+    display: none;
+}
+
+.grassMeter li, .surfMeter li {
+    display: inline-block;
+    width: 1px;
+    height: 40px;
+    position: relative;
+    top: 50%;
+    margin-top: -25%;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+li.bug {
+    background-color: #A8B820;
+    border-color: #6D7815;
+}
+
+li.bug.grass {
+    background-color: #A8B820;
+    border-color: #4E8234;
+}
+
+li.dark {
+    background-color: #A29288;
+    border-color: #49392F;
+}
+
+li.dark.fighting {
+    background-color: #A29288;
+    border-color: #7D1F1A;
+}
+
+li.dark.flying {
+    background-color: #A29288;
+    border-color: #8F7E9A;
+}
+
+li.dark.steel {
+    background-color: #A29288;
+    border-color: #787887;
+}
+
+li.electric {
+    background-color: #FAE078;
+    border-color: #A1871F;
+}
+
+li.electric.flying {
+    background-color: #FAE078;
+    border-color: #8F7E9A;
+}
+
+li.fighting {
+    background-color: #C03028;
+    border-color: #7D1F1A;
+}
+
+li.fire {
+    background-color: #F08030;
+    border-color: #9C531F;
+}
+
+li.grass.poison {
+    background-color: #A7DB8D;
+    border-color: #682A68;
+}
+
+li.ground.dark {
+    background-color: #E0C068;
+    border-color: #49392F;
+}
+
+li.ground.electric {
+    background-color: #E0C068;
+    border-color: #A1871F;
+}
+
+li.ice {
+    background-color: #98D8D8;
+    border-color: #638D8D;
+}
+
+li.normal {
+    background-color: #C6C6A7;
+    border-color: #858568;
+}
+
+li.normal.flying {
+    background-color: #C6C6A7;
+    border-color: #8F7E9A;
+}
+
+li.normal.grass {
+    background-color: #C6C6A7;
+    border-color: #4E8234;
+}
+
+li.poison {
+    background-color: #C183C1;
+    border-color: #682A68;
+}
+
+li.psychic {
+    background-color: #FA92B2;
+    border-color: #A13959;
+}
+
+li.water {
+    background-color: #6890F0;
+    border-color: #445E9C;
+}
+
+li.water.ghost {
+    background-color: #6890F0;
+    border-color: #493963;
+}
+
+li.water.ground {
+    background-color: #6890F0;
+    border-color: #927D44;
+}
+
+
+.grassMeter li:first-child, .surfMeter li:first-child { border-radius: 20px 0 0 20px; }
+.grassMeter li:last-child, .surfMeter li:last-child { border-radius: 0 20px 20px 0; }
+.grassMeter li:only-child, .surfMeter li:only-child { border-radius: 20px; }
+
+.pokemonIcon {
+    width: 96px;
+    height: 96px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -48px;
+}
+
+.pokemonIcon.B:before {
+    font-family: "Pokemon Pixel Font Regular";
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #AAA;
+    color: #000;
+    border-radius: 8px;
+    padding: 0 .3em;
+    content: 'B';
+    position: absolute;
+    top: 1em;
+    left: -1px;
+    display: none;
+}
+
+.pokemonIcon.W:after {
+    font-family: "Pokemon Pixel Font Regular";
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #AAA;
+    color: #FFF;
+    border-radius: 8px;
+    padding: 0 .3em;
+    content: 'W';
+    position: absolute;
+    top: 1em;
+    left: -1px;
+    display: none;
+}
+
+.pokemonIcon.BW:before {
+    font-family: "Pokemon Pixel Font Regular";
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #AAA;
+    color: #000;
+    border-radius: 8px;
+    padding: 0 .3em;
+    content: 'B';
+    position: absolute;
+    top: 1em;
+    left: -1px;
+    display: none;
+}
+
+.pokemonIcon.BW:after {
+    font-family: "Pokemon Pixel Font Regular";
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #AAA;
+    color: #FFF;
+    border-radius: 8px;
+    padding: 0 .3em;
+    content: 'W';
+    position: absolute;
+    top: 2.5em;
+    left: -1px;
+    display: none;
+}
+
+.pokemonIcon:hover.B:before, .pokemonIcon:hover.W:after,
+.pokemonIcon:hover.BW:before, .pokemonIcon:hover.BW:after { display: block; }
+
+.pokemonIcon:hover { z-index: 10; }
+
+.pokemonIcon span { display: none; }
+
+.pokemonIcon:hover span {
+    font-family: "Pokemon Pixel Font Regular";
+    font-size: 16px;
+    white-space: nowrap;
+    background-color: #333;
+    color: #FFF;
+    border-radius: 8px;
+    padding: .1em 0;
+    display: block;
+}
+
+.pokemonIcon .name { margin-top: -1em; }
+.pokemonIcon .rate { margin-top: 100%; }
+
+.pokemonIcon.pkmn504 { background: url("http://cdn.bulbagarden.net/upload/c/cf/Spr_5b_504.png"); }
+.pokemonIcon.pkmn506 { background: url("http://cdn.bulbagarden.net/upload/3/30/Spr_5b_506.png"); }
+.pokemonIcon.pkmn531 { background: url("http://cdn.bulbagarden.net/upload/0/08/Spr_5b_531.png"); }
+.pokemonIcon.pkmn550 { background: url("http://cdn.bulbagarden.net/upload/e/e1/Spr_5b_550.png"); }
+.pokemonIcon.pkmn509 { background: url("http://cdn.bulbagarden.net/upload/8/84/Spr_5b_509.png"); }
+.pokemonIcon.pkmn519 { background: url("http://cdn.bulbagarden.net/upload/a/a5/Spr_5b_519.png"); }
+.pokemonIcon.pkmn522 { background: url("http://cdn.bulbagarden.net/upload/b/b6/Spr_5b_522.png"); }
+.pokemonIcon.pkmn551 { background: url("http://cdn.bulbagarden.net/upload/4/4c/Spr_5b_551.png"); }
+.pokemonIcon.pkmn554 { background: url("http://cdn.bulbagarden.net/upload/1/16/Spr_5b_554.png"); }
+.pokemonIcon.pkmn559 { background: url("http://cdn.bulbagarden.net/upload/c/ce/Spr_5b_559.png"); }
+.pokemonIcon.pkmn594 { background: url("http://cdn.bulbagarden.net/upload/a/aa/Spr_5b_594.png"); }
+.pokemonIcon.pkmn510 { background: url("http://cdn.bulbagarden.net/upload/d/d8/Spr_5b_510.png"); }
+.pokemonIcon.pkmn568 { background: url("http://cdn.bulbagarden.net/upload/f/ff/Spr_5b_568.png"); }
+.pokemonIcon.pkmn572 { background: url("http://cdn.bulbagarden.net/upload/5/5e/Spr_5b_572.png"); }
+.pokemonIcon.pkmn574 { background: url("http://cdn.bulbagarden.net/upload/8/87/Spr_5b_574.png"); }
+.pokemonIcon.pkmn577 { background: url("http://cdn.bulbagarden.net/upload/4/4d/Spr_5b_577.png"); }
+.pokemonIcon.pkmn573 { background: url("http://cdn.bulbagarden.net/upload/f/f3/Spr_5b_573.png"); }
+.pokemonIcon.pkmn587 { background: url("http://cdn.bulbagarden.net/upload/a/a2/Spr_5b_587.png"); }
+.pokemonIcon.pkmn520 { background: url("http://cdn.bulbagarden.net/upload/4/4c/Spr_5b_520.png"); }
+.pokemonIcon.pkmn521 { background: url("http://cdn.bulbagarden.net/upload/3/36/Spr_5b_521_f.png"); }
+.pokemonIcon.pkmn592 { background: url("http://cdn.bulbagarden.net/upload/6/68/Spr_5b_592_f.png"); }
+.pokemonIcon.pkmn593 { background: url("http://cdn.bulbagarden.net/upload/e/ee/Spr_5b_593_f.png"); }
+.pokemonIcon.pkmn582 { background: url("http://cdn.bulbagarden.net/upload/f/f7/Spr_5b_582.png"); }
+.pokemonIcon.pkmn541 { background: url("http://cdn.bulbagarden.net/upload/3/32/Spr_5b_541.png"); }
+.pokemonIcon.pkmn585 { background: url("http://cdn.bulbagarden.net/upload/b/b8/Spr_5b_585.png"); }
+.pokemonIcon.pkmn588 { background: url("http://cdn.bulbagarden.net/upload/c/ca/Spr_5b_588.png"); }
+.pokemonIcon.pkmn590 { background: url("http://cdn.bulbagarden.net/upload/e/ec/Spr_5b_590.png"); }
+.pokemonIcon.pkmn542 { background: url("http://cdn.bulbagarden.net/upload/4/48/Spr_5b_542.png"); }
+.pokemonIcon.pkmn613 { background: url("http://cdn.bulbagarden.net/upload/9/96/Spr_5b_613.png"); }
+.pokemonIcon.pkmn523 { background: url("http://cdn.bulbagarden.net/upload/1/13/Spr_5b_523.png"); }
+.pokemonIcon.pkmn505 { background: url("http://cdn.bulbagarden.net/upload/f/f2/Spr_5b_505.png"); }
+.pokemonIcon.pkmn536 { background: url("http://cdn.bulbagarden.net/upload/a/a8/Spr_5b_536.png"); }
+.pokemonIcon.pkmn616 { background: url("http://cdn.bulbagarden.net/upload/9/90/Spr_5b_616.png"); }
+.pokemonIcon.pkmn618 { background: url("http://cdn.bulbagarden.net/upload/c/c6/Spr_5b_618.png"); }
+.pokemonIcon.pkmn537 { background: url("http://cdn.bulbagarden.net/upload/8/81/Spr_5b_537.png"); }
+.pokemonIcon.pkmn569 { background: url("http://cdn.bulbagarden.net/upload/c/c4/Spr_5b_569.png"); }
+.pokemonIcon.pkmn575 { background: url("http://cdn.bulbagarden.net/upload/4/41/Spr_5b_575.png"); }
+.pokemonIcon.pkmn578 { background: url("http://cdn.bulbagarden.net/upload/f/fb/Spr_5b_578.png"); }
+.pokemonIcon.pkmn624 { background: url("http://cdn.bulbagarden.net/upload/a/af/Spr_5b_624.png"); }
+.pokemonIcon.pkmn576 { background: url("http://cdn.bulbagarden.net/upload/e/e6/Spr_5b_576.png"); }
+.pokemonIcon.pkmn579 { background: url("http://cdn.bulbagarden.net/upload/1/10/Spr_5b_579.png"); }
+.pokemonIcon.pkmn507 { background: url("http://cdn.bulbagarden.net/upload/2/22/Spr_5b_507.png"); }
+.pokemonIcon.pkmn538 { background: url("http://cdn.bulbagarden.net/upload/9/91/Spr_5b_538.png"); }
+.pokemonIcon.pkmn539 { background: url("http://cdn.bulbagarden.net/upload/c/ca/Spr_5b_539.png"); }
+.pokemonIcon.pkmn626 { background: url("http://cdn.bulbagarden.net/upload/4/4f/Spr_5b_626.png"); }
+.pokemonIcon.pkmn627 { background: url("http://cdn.bulbagarden.net/upload/d/d0/Spr_5b_627.png"); }
+.pokemonIcon.pkmn629 { background: url("http://cdn.bulbagarden.net/upload/0/04/Spr_5b_629.png"); }
+.pokemonIcon.pkmn508 { background: url("http://cdn.bulbagarden.net/upload/1/17/Spr_5b_508.png"); }
+
+/* ==========================================================================
+   Animation classes
+   ========================================================================== */
+
+@keyframes fade {
+    0%   { opacity: 0; display: none; }
+    100% { opacity: 100; }
+}
+
+@-moz-keyframes fade {
+    0%   { opacity: 0; display: none;  }
+    100% { opacity: 100; }
+}
+
+@-webkit-keyframes fade {
+    0%   { opacity: 0; display: none;  }
+    100% { opacity: 100; }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    20%, 60% {
+        transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+    }
+}
+
+@-moz-keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    20%, 60% {
+        transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+    }
+}
+@-webkit-keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    20%, 60% {
+        transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+    }
+}
+
+@keyframes shake2 {
+    0%, 100% { margin-left: -203; }
+    20%, 60% { margin-left: -206px; }
+    40% { margin-left: -200px; }
+}
+
+@-moz-keyframes shake2 {
+    0%, 100% { margin-left: -203; }
+    20%, 60% { margin-left: -206px; }
+    40% { margin-left: -200px; }
+}
+@-webkit-keyframes shake2 {
+    0%, 100% { margin-left: -203; }
+    20%, 60% { margin-left: -206px; }
+    40% { margin-left: -200px; }
+}
+
+.fadeHide img {
+    opacity: 0;
+    animation-name: fade;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+
+    -moz-animation-name: fade;
+    -moz-animation-duration: 0.3s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-direction: reverse;
+
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-direction: reverse;
+}
+
+.fadeShow img {
+    animation-name: fade;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+
+    -moz-animation-name: fade;
+    -moz-animation-duration: 0.3s;
+    -moz-animation-timing-function: linear;
+
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
