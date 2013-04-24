@@ -164,7 +164,7 @@ function MainCtrl($scope, Page) {
 }
 
 function HomeCtrl($scope, Page, $location) {
-    Page.setTitle("Grande Infografico Pokemon");
+    Page.setTitle("Pokeguide");
     Page.setPageId("home");
 
     $scope.goToRoute = function (id){ $location.path( "/route/" + id ); };

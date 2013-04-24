@@ -120,9 +120,10 @@ body {
 h1 {
     font-family: "Pokemon Pixel Font Regular";
     position: absolute;
-    top: 10px;
-    left: 55%;
-    font-size: 4em;
+    top: 0em;
+    margin: 0;
+    left: 20%;
+    font-size: 6em;
     display: inline-block;
     color: #FECD15;
     text-shadow: -3px 0 #3B5BBE, 0 3px #3B5BBE, 3px 0 #3B5BBE, 0 -3px #3B5BBE;
@@ -130,17 +131,12 @@ h1 {
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
-
-    -moz-transform: rotate(10deg);
-    -webkit-transform: rotate(10deg);
-    -o-transform: rotate(10deg);
-    transform: rotate(10deg);
-
     z-index: 10;
 }
 
 .route h1 {
-    left: 10%;
+    left: 15%;
+    top: 5%;
     -moz-transform: rotate(-30deg);
     -webkit-transform: rotate(-30deg);
     -o-transform: rotate(-30deg);
@@ -195,15 +191,6 @@ h1 {
 }
 
 .routes .route4 {
-    top: 68%;
-    left: 69%;
-    transform: rotate(-24deg);
-    -moz-transform: rotate(-24deg);
-    -webkit-transform: rotate(-24deg);
-    width: 6%;
-}
-
-.routes .route5 {
     top: 66%;
     left: 41.5%;
     transform: rotate(90deg);
@@ -212,7 +199,7 @@ h1 {
     width: 16%;
 }
 
-.routes .route6 {
+.routes .route5 {
     top: 50%;
     left: 42%;
     transform: rotate(0deg);
@@ -221,7 +208,7 @@ h1 {
     width: 7%;
 }
 
-.routes .route7 {
+.routes .route6 {
     top: 43%;
     left: 15%;
     transform: rotate(35deg);
@@ -230,7 +217,7 @@ h1 {
     width: 15%;
 }
 
-.routes .route8 {
+.routes .route7 {
     top: 29%;
     left: 16%;
     transform: rotate(-33deg);
@@ -239,9 +226,18 @@ h1 {
     width: 13%;
 }
 
-.routes .route9 {
+.routes .route8 {
     top: 23%;
     left: 30%;
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    width: 7%;
+}
+
+.routes .route9 {
+    top: 23%;
+    left: 42%;
     transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
