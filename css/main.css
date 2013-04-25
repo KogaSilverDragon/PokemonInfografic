@@ -103,6 +103,15 @@ textarea {
     font-style:normal;
 }
 
+@font-face {
+    font-family:"Pokemon BW";
+    src: url("../font/pokemon_black_and_white_version_font_by_mauriziovit-d4t992c-webfont.eot?") format("eot"),
+         url("../font/pokemon_black_and_white_version_font_by_mauriziovit-d4t992c-webfont.ttf") format("truetype"),
+         url("../font/pokemon_black_and_white_version_font_by_mauriziovit-d4t992c-webfont.svg#Pokemon-BW") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -125,8 +134,9 @@ h1 {
     left: 20%;
     font-size: 6em;
     display: inline-block;
-    color: #FECD15;
-    text-shadow: -3px 0 #3B5BBE, 0 3px #3B5BBE, 3px 0 #3B5BBE, 0 -3px #3B5BBE;
+    color: #FFF;
+    text-shadow: -5px 0 #000, 0 5px #000, 5px 0 #000, 0 -5px #000;
+    letter-spacing: 8px;
     -moz-transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
@@ -390,6 +400,7 @@ h1 {
 
 .radio, .checkbox {
     padding: .2em .6em;
+    margin: 0 10px;
     border: 3px solid;
     border-radius: 1em;
     font-size: 1.5em;
@@ -403,29 +414,21 @@ h1 {
 
 .radio > input, .checkbox  > input { display: none; }
 
-.radio.active:after, .checkbox.active:after {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 10px;
-    height: 10px;
-    background-color: #ec3122;
-    border-radius: 50%;
-    z-index: 1;
-    content: '';
+.radio.b {
+    color: #FFF;
+    background-color: #000;
+    border-color: #FFF;
 }
 
-.radio.b {
+.radio.b.active { box-shadow: 0 0 20px 10px #eb5817; }
+
+.radio.w {
     color: #000;
     background-color: #FFF;
     border-color: #000;
 }
 
-.radio.w {
-    color: #FFF;
-    background-color: #000;
-    border-color: #FFF;
-}
+.radio.w.active { box-shadow: 0 0 20px 10px #5DA6D0 }
 
 .checkbox {
     background: #98D8D8 url("../img/flake.png") no-repeat center;
@@ -436,6 +439,8 @@ h1 {
     width: 40px;
     height: 40px;
 }
+
+.checkbox.active { box-shadow: 0 0 20px 10px #FFF; }
 
 .grassMeter, .surfMeter {
     width: 500px;
@@ -495,6 +500,8 @@ h1 {
     margin-top: -25%;
     border-top: 5px solid;
     border-bottom: 5px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
